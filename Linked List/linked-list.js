@@ -50,6 +50,13 @@ class LinkedList{
 		//because of the above item will return all the ll
 		// return the LinkedList (from line 29)
 	}
+
+	pop(value){
+		
+	}
+
+
+
 	unshift(value){
 		//create new node
 		//add node to biginning
