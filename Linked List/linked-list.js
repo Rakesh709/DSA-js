@@ -17,6 +17,7 @@
 // }
 
 //------------------Linked List Constructor---------------------------------
+//because create node is common
 class Node{
 	constructor(value){
 		this.value= value
@@ -24,6 +25,19 @@ class Node{
 	}
 }
 
+class LinkedList{
+	//create new node
+	constructor(value){}
+	//create new node 
+	//add node to end
+	push(value){}
+	//create new node
+	//add node to biginner
+	unshift(value){}
+	//create new node
+	//insert node
+	inser(index,value){}
+}
 
 
 class LinkedList{
@@ -52,10 +66,8 @@ class LinkedList{
 	}
 
 	pop(value){
-		
+
 	}
-
-
 
 	unshift(value){
 		//create new node
