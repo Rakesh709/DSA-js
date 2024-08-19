@@ -52,6 +52,7 @@ class LinkedList{
 		//create a new node
 		//add node to end
 		const newNode = new Node(value)
+		//what if we're inserting this into a linked list that does not have any nodes yet?
 		if(!this.head){
 			this.head = newNode
 			this.tail = newNode
