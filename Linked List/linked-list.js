@@ -67,6 +67,26 @@ class LinkedList{
 	}
 
 	pop(value){
+		//remove node with edge cases
+		// node node 
+		//more than 2-3 node
+		// only one node 
+
+		if(!this.head) return undefined
+		let temp = this.head
+		let pre = this.head
+		while(temp.next){
+			pre = temp
+			temp = temp.next
+		}
+		this.tail = pre
+		this.head.next= null
+		this.length--
+		if(this.length===0){
+			this.head= null
+			this.tail= null
+		}
+		return temp
 
 	}
 
@@ -93,6 +113,7 @@ class LinkedList{
 
 let myLinkedList = new LinkedList(7);
 
-myLinkedList.push(4)
+
+myLinkedList.pop()
 
 console.log(myLinkedList)
