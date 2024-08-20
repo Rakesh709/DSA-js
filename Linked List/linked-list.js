@@ -25,19 +25,19 @@ class Node{
 	}
 }
 
-class LinkedList{
-	//create new node
-	constructor(value){}
-	//create new node 
-	//add node to end
-	push(value){}
-	//create new node
-	//add node to biginner
-	unshift(value){}
-	//create new node
-	//insert node
-	inser(index,value){}
-}
+// class LinkedList{
+// 	//create new node
+// 	constructor(value){}
+// 	//create new node 
+// 	//add node to end
+// 	push(value){}
+// 	//create new node
+// 	//add node to biginner
+// 	unshift(value){}
+// 	//create new node
+// 	//insert node
+// 	inser(index,value){}
+// }
 
 
 class LinkedList{
@@ -93,6 +93,16 @@ class LinkedList{
 	unshift(value){
 		//create new node
 		//add node to biginning
+		const newNode = new Node(value)
+		if(!this.head){
+			this.head= newNode
+			this.tail = newNode
+		}else{
+			newNode.next = this.head
+			this.head= newNode
+		}
+		this.length++
+		return this
 	}
 	inser(value){
 		//create new node
@@ -113,7 +123,11 @@ class LinkedList{
 
 let myLinkedList = new LinkedList(7);
 
+myLinkedList.push(77)
+//myLinkedList.push(99)
 
 myLinkedList.pop()
+
+myLinkedList.unshift(69)
 
 console.log(myLinkedList)
