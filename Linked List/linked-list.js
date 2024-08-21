@@ -104,6 +104,21 @@ class LinkedList{
 		this.length++
 		return this
 	}
+
+	shift(){
+	   if(!this.head) return undefined
+	   let temp = this.head
+	   this.head= this.head.next
+	   this.length--
+	   if(this.length===0){
+		this.tail=null
+	   }
+	   temp.next=null
+	   return temp
+	}
+
+
+
 	inser(value){
 		//create new node
 		//insert node
@@ -121,13 +136,14 @@ class LinkedList{
 
 // const newNode = new Node(4) 
 
-let myLinkedList = new LinkedList(7);
+let myLinkedList = new LinkedList(2);
 
-myLinkedList.push(77)
+myLinkedList.push(1)
 //myLinkedList.push(99)
 
-myLinkedList.pop()
+//myLinkedList.pop()
 
-myLinkedList.unshift(69)
+//myLinkedList.unshift(69)
+myLinkedList.shift()
 
 console.log(myLinkedList)
